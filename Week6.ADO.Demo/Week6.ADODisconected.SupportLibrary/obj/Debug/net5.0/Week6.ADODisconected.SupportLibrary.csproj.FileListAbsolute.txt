@@ -1,0 +1,12 @@
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\bin\Debug\net5.0\Week6.ADODisconected.SupportLibrary.deps.json
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\bin\Debug\net5.0\Week6.ADODisconected.SupportLibrary.dll
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\bin\Debug\net5.0\ref\Week6.ADODisconected.SupportLibrary.dll
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\bin\Debug\net5.0\Week6.ADODisconected.SupportLibrary.pdb
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\obj\Debug\net5.0\Week6.ADODisconected.SupportLibrary.csproj.AssemblyReference.cache
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\obj\Debug\net5.0\Week6.ADODisconected.SupportLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\obj\Debug\net5.0\Week6.ADODisconected.SupportLibrary.AssemblyInfoInputs.cache
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\obj\Debug\net5.0\Week6.ADODisconected.SupportLibrary.AssemblyInfo.cs
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\obj\Debug\net5.0\Week6.ADODisconected.SupportLibrary.csproj.CoreCompileInputs.cache
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\obj\Debug\net5.0\Week6.ADODisconected.SupportLibrary.dll
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\obj\Debug\net5.0\ref\Week6.ADODisconected.SupportLibrary.dll
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.ADODisconected.SupportLibrary\obj\Debug\net5.0\Week6.ADODisconected.SupportLibrary.pdb
