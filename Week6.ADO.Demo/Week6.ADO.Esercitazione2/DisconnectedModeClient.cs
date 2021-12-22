@@ -18,9 +18,12 @@ namespace Week6.ADO.Esercitazione2
         private static DataSet ticketDs = new DataSet();
         private static SqlDataAdapter ticketAdapter = new SqlDataAdapter();
 
+        private static List<Ticket> ticketList = new List<Ticket>();
+
         private static SqlCommand ticketSelectCmd;
         private static SqlCommand ticketInsertCmd;
         private static SqlCommand ticketDeleteCmd;
+        private static SqlCommand ticketEditCmd;
 
         #endregion
 
@@ -77,7 +80,7 @@ namespace Week6.ADO.Esercitazione2
                         "Status"
                     )
                 );
-                
+
 
                 ticketAdapter.InsertCommand = ticketInsertCmd;
 
@@ -102,6 +105,22 @@ namespace Week6.ADO.Esercitazione2
 
                 #endregion
 
+                #region Update Command
+                ticketEditCmd = connection.CreateCommand();
+                ticketEditCmd.CommandType = CommandType.Text;
+                ticketEditCmd.CommandText = "UPDATE Ticket SET Status = @status WHERE ID = @id";
+                
+                ticketEditCmd.Parameters.Add(new SqlParameter(
+                "@status", SqlDbType.NVarChar, 50, "status"
+                ));
+
+                ticketEditCmd.Parameters.Add(new SqlParameter(
+                "@id", SqlDbType.NVarChar, 50, "id"
+                ));
+
+                ticketAdapter.UpdateCommand = ticketEditCmd;
+                #endregion
+
                 ticketAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 ticketAdapter.Fill(ticketDs, "Ticket");
             }
@@ -115,7 +134,43 @@ namespace Week6.ADO.Esercitazione2
             }
         }
 
-        
+        internal static void GetResolvedTickets()
+        {
+            ListTickets(true);   
+            var resolvedTickets = ticketList.Where(x => x.Status == "Resolved");
+        }
+        internal static void GetTicketsWithA()
+        {
+            ListTickets(true);
+            var resolvedTickets = ticketList.Where(x => x.Username.StartsWith("A"));
+        }
+        internal static void GetOldTickets()
+        {
+            ListTickets(true);
+            var resolvedTickets = ticketList.Where(x => x.InsertDate.Subtract(DateTime.Now).Days > 30);
+        }
+
+        internal static void OrderData()
+        {
+            ListTickets(true);
+            var resolvedTickets = ticketList.OrderBy(x => x.InsertDate);
+        }
+
+        internal static void OrderDescription()
+        {
+            ListTickets(true);
+            var resolvedTickets = ticketList.OrderBy(x => x.Description);
+        }
+
+        internal static void GroupByStatus()
+        {
+            ListTickets(true);
+            var groupTicket = ticketList.GroupBy(x => x.Status).Select(x => new
+            {
+                x.Key,
+                
+            })
+        }
 
         public static void ListTickets(bool prompt = true)
         {
@@ -136,6 +191,16 @@ namespace Week6.ADO.Esercitazione2
                 string state = dataRow.RowState != DataRowState.Unchanged ? "  *  " : "";
                 Console.WriteLine("{0,-5}{1,-40}{2,10}{3,20}{4,5}",
                     dataRow["Id"], dataRow["Description"], dataRow["Status"], formattedDate, state);
+                var newTicket = new Ticket()
+                {
+                    Id = (int)dataRow["Id"],
+                    Description = (string)dataRow["Description"],
+                    InsertDate = (DateTime)dataRow["Insert_date"],
+                    Username = (string)dataRow["Username"],
+                    Status = (string)dataRow["Status"]
+                };
+                if (prompt && !ticketList.Contains(newTicket))
+                    ticketList.Add(newTicket);
             }
             Console.WriteLine(new String('-', 80));
 
@@ -160,7 +225,7 @@ namespace Week6.ADO.Esercitazione2
             newRow["Insert_date"] = DateTime.Now;
             newRow["Status"] = "New";
             ticketDs.Tables["Ticket"].Rows.Add(newRow);
-
+            
             Refresh();
 
             Console.WriteLine("---- Premi un tasto ----");
@@ -186,13 +251,28 @@ namespace Week6.ADO.Esercitazione2
             Console.ReadKey();
         }
 
+        public static void ModifyTicket()
+        {
+            ListTickets(false);
+            string id = ConsoleHelpers.GetData("ID del ticket da modificare");
+            string status = ConsoleHelpers.GetData("In quale stato si trova il ticket?");
+            DataRow rowToUpdate = ticketDs.Tables["Ticket"].Rows.Find(id);
+            if (rowToUpdate != null)
+            {
+                rowToUpdate["Status"] = status;
+            }
+            Refresh();
+            Console.WriteLine("---- Premi un tasto ----");
+            Console.ReadKey();
+        }
+
         public static void Refresh()
         {
             // update db
-            ticketAdapter.Update(ticketDs, "Tickets");
+            ticketAdapter.Update(ticketDs, "Ticket");
             // refresh ds
             ticketDs.Reset();
-            ticketAdapter.Fill(ticketDs, "Tickets");
+            ticketAdapter.Fill(ticketDs, "Ticket");
         }
 
 

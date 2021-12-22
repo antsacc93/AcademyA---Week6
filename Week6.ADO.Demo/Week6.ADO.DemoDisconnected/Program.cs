@@ -8,12 +8,12 @@ namespace Week6.ADO.DemoDisconnected
         {
             Console.WriteLine("=== ADO DISCONNECTED DAY 2 ===");
             //ADODisconnectedDemo.InsertRowDemo();
-            //ADODisconnectedDemo.FillDataSet();
+            ADODisconnectedDemo.FillDataSet();
             //ADODisconnectedDemo.UpdateRowDemo();
             //ADODisconnectedDemo.DeleteRowDemo();
             //ADODisconnectedDemo.FillDataSet();
             //ADODisconnectedDemo.MultipleSelectDemo();
-            ADODisconnectedDemo.ConcorrenzaOttimistica();
+            //ADODisconnectedDemo.ConcorrenzaOttimistica();
         }
     }
 }

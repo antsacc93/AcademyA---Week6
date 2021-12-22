@@ -40,7 +40,12 @@
       "ProjectGuid": "c2d4f4b4-d39b-468c-8159-82ac95775452",
       "DisplayName": "Week6.ADO.Esercitazione2",
       "ColorIndex": 6
+    },
+    "0d455741-f030-4232-bc1c-d596e433bc7a": {
+      "ProjectGuid": "0d455741-f030-4232-bc1c-d596e433bc7a",
+      "DisplayName": "Week6.Linq.Demo",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }
