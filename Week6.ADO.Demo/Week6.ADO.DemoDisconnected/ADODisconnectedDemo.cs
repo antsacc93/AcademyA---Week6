@@ -45,11 +45,20 @@ namespace Week6.ADO.DemoDisconnected
                 //lavoro in modalità disconnessa
                 Console.WriteLine("=== Movie List ===");
                 //STAMPA DEI DATI IN LOCALE
+                List<Film> movies = new List<Film>();
                 foreach (DataRow row in movieDs.Tables["Movie"].Rows)
                 {
                     Console.WriteLine($"[ {row["Id"]} ] Title: {row["Title"]} " +
                         $"Genre: {row["Genre"]} Duration: {row["Duration"]}");
+                    movies.Add(new Film
+                    {
+                        Id = (int)row["Id"],
+                        Title = (string)row["Title"],
+                        Genre = (string)row["Genre"],
+                        Duration = (int)row["Duration"]
+                    });
                 }
+                movies.Where(x => x.Duration > 100);
             }
             catch (SqlException ex)
             {
@@ -144,6 +153,7 @@ namespace Week6.ADO.DemoDisconnected
         public static void DeleteRowDemo()
         {
             DataSet movieDs = new DataSet();
+            
             using SqlConnection connection = new SqlConnection(ConnectionString);
             try
             {

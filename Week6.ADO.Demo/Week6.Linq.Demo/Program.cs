@@ -114,9 +114,55 @@ namespace Week6.Linq.Demo
         #endregion
         static void Main(string[] args)
         {
-            QuerySyntax();
-            LambdaSyntax();
+            //QuerySyntax();
+            //LambdaSyntax();
+            //DeferredExecution();
+            ImmediateExecution();
         }
+
+        public static void ImmediateExecution()
+        {
+            var books = GetBooks();
+            var filteredList = books.Where(book => book.Pages > 200).ToList(); //l'esecuzione avviene qui
+
+            books.Add(new Book()
+            {
+                Id = 20,
+                Title = "Orgoglio e pregiudizio",
+                Genre = "Romanzo",
+                Pages = 230,
+                AuthorId = 1,
+                PublishYear = 1700
+            });
+
+            foreach (var item in filteredList)
+            {
+                Console.WriteLine($"{item.Id} - {item.Title}");
+            }
+        }
+
+        public static void DeferredExecution()
+        {
+            var books = GetBooks();
+            var filteredList = books.Where(book => book.Pages > 200); //query costruita ma non ancora eseguita
+
+            books.Add(new Book()
+            {
+                Id = 20,
+                Title = "Orgoglio e pregiudizio",
+                Genre = "Romanzo",
+                Pages = 230,
+                AuthorId = 1,
+                PublishYear = 1700
+            });
+
+            foreach (var item in filteredList) //l'esecuzione della query avviene qui
+            {
+                Console.WriteLine($"{item.Id} - {item.Title}");
+            }
+        }
+
+        
 
         public static void LambdaSyntax()
         {
@@ -171,6 +217,10 @@ namespace Week6.Linq.Demo
                                         Genre = bookForGenre.Key,
                                         SumOfPages = bookForGenre.Sum(x => x.Pages)
                                     });
+            foreach (var item in sumPagesGenre)
+            {
+                Console.WriteLine($"{item.Genre} - Tot. {item.SumOfPages}");
+            }
         }
 
         public static void QuerySyntax()
