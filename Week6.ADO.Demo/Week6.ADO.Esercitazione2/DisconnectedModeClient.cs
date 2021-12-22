@@ -168,8 +168,8 @@ namespace Week6.ADO.Esercitazione2
             var groupTicket = ticketList.GroupBy(x => x.Status).Select(x => new
             {
                 x.Key,
-                
-            })
+                Tickets = x.Select(x => x)
+            });
         }
 
         public static void ListTickets(bool prompt = true)
