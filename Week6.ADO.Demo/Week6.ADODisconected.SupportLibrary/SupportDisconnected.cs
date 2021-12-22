@@ -23,6 +23,8 @@ namespace Week6.ADODisconected.SupportLibrary
             //DELETE
             adapter.DeleteCommand = GenerateDeleteCommand(conn);
 
+            //recupero delle informazioni sulla primary key di ogni specifica tabella
+            adapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
             //primo parametro: dataset -- secondo parametro: nome della tabella nel db
             adapter.Fill(movieDs, "Movie");
 

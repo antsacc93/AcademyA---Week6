@@ -7,7 +7,13 @@ namespace Week6.ADO.DemoDisconnected
         static void Main(string[] args)
         {
             Console.WriteLine("=== ADO DISCONNECTED DAY 2 ===");
-            ADODisconnectedDemo.FillDataSet();
+            //ADODisconnectedDemo.InsertRowDemo();
+            //ADODisconnectedDemo.FillDataSet();
+            //ADODisconnectedDemo.UpdateRowDemo();
+            //ADODisconnectedDemo.DeleteRowDemo();
+            //ADODisconnectedDemo.FillDataSet();
+            //ADODisconnectedDemo.MultipleSelectDemo();
+            ADODisconnectedDemo.ConcorrenzaOttimistica();
         }
     }
 }

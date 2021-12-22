@@ -25,7 +25,22 @@
       "ProjectGuid": "d3928dca-6375-41d8-87aa-ba68e0848396",
       "DisplayName": "Week6.Demo.ClassLibrary",
       "ColorIndex": 3
+    },
+    "8845d3de-0ecb-4721-ad05-00162066dec5": {
+      "ProjectGuid": "8845d3de-0ecb-4721-ad05-00162066dec5",
+      "DisplayName": "Week6.ADO.DemoDisconnected",
+      "ColorIndex": 4
+    },
+    "50ed9594-4074-4e1b-b521-29de98ac23ca": {
+      "ProjectGuid": "50ed9594-4074-4e1b-b521-29de98ac23ca",
+      "DisplayName": "Week6.ADODisconected.SupportLibrary",
+      "ColorIndex": 5
+    },
+    "c2d4f4b4-d39b-468c-8159-82ac95775452": {
+      "ProjectGuid": "c2d4f4b4-d39b-468c-8159-82ac95775452",
+      "DisplayName": "Week6.ADO.Esercitazione2",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 7
 }

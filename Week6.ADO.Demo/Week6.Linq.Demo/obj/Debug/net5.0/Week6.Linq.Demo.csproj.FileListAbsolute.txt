@@ -1,0 +1,16 @@
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\bin\Debug\net5.0\Week6.Linq.Demo.exe
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\bin\Debug\net5.0\Week6.Linq.Demo.deps.json
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\bin\Debug\net5.0\Week6.Linq.Demo.runtimeconfig.json
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\bin\Debug\net5.0\Week6.Linq.Demo.runtimeconfig.dev.json
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\bin\Debug\net5.0\Week6.Linq.Demo.dll
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\bin\Debug\net5.0\ref\Week6.Linq.Demo.dll
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\bin\Debug\net5.0\Week6.Linq.Demo.pdb
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\Week6.Linq.Demo.csproj.AssemblyReference.cache
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\Week6.Linq.Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\Week6.Linq.Demo.AssemblyInfoInputs.cache
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\Week6.Linq.Demo.AssemblyInfo.cs
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\Week6.Linq.Demo.csproj.CoreCompileInputs.cache
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\Week6.Linq.Demo.dll
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\ref\Week6.Linq.Demo.dll
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\Week6.Linq.Demo.pdb
+C:\Users\AntoniaSacchitella\Desktop\Week 6\Week6.ADO.Demo\Week6.Linq.Demo\obj\Debug\net5.0\Week6.Linq.Demo.genruntimeconfig.cache
