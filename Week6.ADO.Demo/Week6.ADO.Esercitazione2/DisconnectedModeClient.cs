@@ -138,28 +138,33 @@ namespace Week6.ADO.Esercitazione2
         {
             ListTickets(true);   
             var resolvedTickets = ticketList.Where(x => x.Status == "Resolved");
+            PrintQueryResult(resolvedTickets);
         }
         internal static void GetTicketsWithA()
         {
             ListTickets(true);
-            var resolvedTickets = ticketList.Where(x => x.Username.StartsWith("A"));
+            var ticketsWithA = ticketList.Where(x => x.Username.StartsWith("A"));
+            PrintQueryResult(ticketsWithA);
         }
         internal static void GetOldTickets()
         {
             ListTickets(true);
-            var resolvedTickets = ticketList.Where(x => x.InsertDate.Subtract(DateTime.Now).Days > 30);
+            var oldTickets = ticketList.Where(x => DateTime.Now.Subtract(x.InsertDate).Days > 30);
+            PrintQueryResult(oldTickets);
         }
 
         internal static void OrderData()
         {
             ListTickets(true);
             var resolvedTickets = ticketList.OrderBy(x => x.InsertDate);
+            PrintQueryResult(resolvedTickets);
         }
 
         internal static void OrderDescription()
         {
             ListTickets(true);
             var resolvedTickets = ticketList.OrderBy(x => x.Description);
+            PrintQueryResult(resolvedTickets);
         }
 
         internal static void GroupByStatus()
@@ -170,6 +175,18 @@ namespace Week6.ADO.Esercitazione2
                 x.Key,
                 Tickets = x.Select(x => x)
             });
+            foreach (var item in groupTicket)
+            {
+                Console.WriteLine(item.Key);
+                foreach (var ticket in item.Tickets)
+                {
+                    Console.WriteLine("{0,-5}{1,-40}{2,10}{3,20}{4,5}",
+                    ticket.Id, ticket.Description, ticket.Status, ticket.InsertDate.ToShortDateString(), ticket.Username);
+                }
+            }
+
+            Console.WriteLine("Premi un tasto per tornare al menù");
+            Console.ReadKey();
         }
 
         public static void ListTickets(bool prompt = true)
@@ -273,6 +290,19 @@ namespace Week6.ADO.Esercitazione2
             // refresh ds
             ticketDs.Reset();
             ticketAdapter.Fill(ticketDs, "Ticket");
+        }
+
+        public static void PrintQueryResult(IEnumerable<Ticket> result)
+        {
+            Console.WriteLine("Risultato");
+            Console.WriteLine();
+            foreach (var item in result)
+            {
+                Console.WriteLine("{0,-5}{1,-40}{2,10}{3,20}{4,5}",
+                    item.Id, item.Description, item.Status, item.InsertDate.ToShortDateString());
+            }
+            Console.WriteLine("Premi un tasto per tornare al menù");
+            Console.ReadKey();
         }
 
 

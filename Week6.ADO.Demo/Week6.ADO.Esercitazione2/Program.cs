@@ -51,7 +51,19 @@ namespace Week6.ADO.Esercitazione2
                         DisconnectedModeClient.GetResolvedTickets();
                         break;
                     case "6":
-                        //DisconnectedModeClient.Refresh();
+                        DisconnectedModeClient.GetTicketsWithA();
+                        break;
+                    case "7":
+                        DisconnectedModeClient.GetOldTickets();
+                        break;
+                    case "8":
+                        DisconnectedModeClient.OrderData();
+                        break;
+                    case "9":
+                        DisconnectedModeClient.OrderDescription();
+                        break;
+                    case "10":
+                        DisconnectedModeClient.GroupByStatus();
                         break;
                     case "q":
                         quit = true;
